@@ -21,6 +21,8 @@ for( (k, v) <- scores)
   println(k + " has scored...." + v)
 
 
+// note
+// result of for yield is same type as the element we are operating on
 val revScores = for( (k, v) <- scores) yield (v, k)
 revScores
 
