@@ -21,5 +21,8 @@ for( (k, v) <- scores)
   println(k + " has scored...." + v)
 
 
+val revScores = for( (k, v) <- scores) yield (v, k)
+revScores
+
 
 
