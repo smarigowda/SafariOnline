@@ -9,6 +9,7 @@ class CashFlow(amount: Double, currency: String, due: LocalDateTime) {
 
   private lazy val processedAt = LocalDateTime.now // value computed only when accessed
   val settle = due.toLocalDate.plusDays(2) // public by default
+  val dueDateTime = due
 
   def rollForward() = {
     val retval = new CashFlow(amount, currency, due.plusDays(1))
@@ -28,6 +29,9 @@ object CashFlow {
     println(c2.settle)
     println(c1.processedAt)
     println(c2.processedAt)
+    println("due dates")
+    println(c1.dueDateTime)
+    println(c2.dueDateTime)
   }
 }
 
