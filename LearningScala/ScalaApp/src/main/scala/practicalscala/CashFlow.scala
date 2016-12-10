@@ -25,6 +25,9 @@ object CashFlow {
     println(c1.settle)
     val c2 = c1.rollForward()
     Thread.sleep(10000)
+    println(c2.settle)
+    println(c1.processedAt)
+    println(c2.processedAt)
   }
 }
 
