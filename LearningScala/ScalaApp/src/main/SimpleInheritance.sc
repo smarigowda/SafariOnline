@@ -19,14 +19,14 @@ println(c.feed())
 var p: Pet = new Cat
 
 class Dog extends Pet {
-  override def feed() = {
+  override val feed = {
     "Dog eating..."
   }
 }
 
 val d = new Dog
 
-d.feed()
+d.feed
 
 
 
