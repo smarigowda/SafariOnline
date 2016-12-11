@@ -1,9 +1,9 @@
-val n = 2
+val n = 1
 
-val m = 2
 n match {
-  case 1 => println("case is one")
+  case 1 | 3 | 5 => println("odd case")
+  case 2 | 4 | 6 => println("even case")
   case _ => println("default case _")  // match any, default case
-  case m => println("case is two")
+
 
 }
