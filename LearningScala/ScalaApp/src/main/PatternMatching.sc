@@ -26,10 +26,12 @@ def doIt2(x: Any) = x match {
   case n: Int => {
     println(s"it is an int: value = $n")
   }
+  case s: String => {
+    println(s"it is a String: value = $s")
+  }
+  case d => println(s"default case...value = $d")
 }
 
 doIt2(9)
-
-
-
-
+doIt2(9.0)
+doIt2("abc")
