@@ -22,4 +22,14 @@ doIt(4)
 doIt("Santosh")
 doIt(6.0)
 
+def doIt2(x: Any) = x match {
+  case n: Int => {
+    println(s"it is an int: value = $n")
+  }
+}
+
+doIt2(9)
+
+
+
 
