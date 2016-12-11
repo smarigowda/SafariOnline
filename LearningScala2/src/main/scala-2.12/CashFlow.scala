@@ -39,5 +39,12 @@ object CashFlow {
       }
     }
 
+    p2 match {
+      case Person(name, age, _) if age > 30 => {
+        println(s"$name is older than 30")
+      }
+    }
+
+
   }
 }
