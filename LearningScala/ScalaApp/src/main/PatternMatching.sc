@@ -1,7 +1,8 @@
-val n = 3
+val n = 2
 
+val m = 2
 n match {
   case 1 => println("case is one")
-  case 2 => println("case is two")
-  case _ => println("default case _")
+  case m => println("case is two")
+  case _ => println("default case _")  // match any, default case
 }
