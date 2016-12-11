@@ -10,7 +10,12 @@ def doIt(x: Any) = x match {
   case _ : Int => {
     println("case Integer")
   }
+  case _ : String => {
+    println("case String")
+  }
 }
 
 doIt(4)
+doIt("Santosh")
+
 
