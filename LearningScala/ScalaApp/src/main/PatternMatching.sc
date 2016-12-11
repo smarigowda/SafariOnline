@@ -13,9 +13,9 @@ def doIt(x: Any) = x match {
   case _ : String => {
     println("case String")
   }
-//  case _ => {
-//    println("Anything else...")
-//  }
+  case _ => {
+    println("Anything else...")
+  }
 }
 
 doIt(4)
