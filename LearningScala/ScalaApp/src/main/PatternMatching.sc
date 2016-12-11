@@ -7,7 +7,7 @@ n match {
 }
 
 def doIt(x: Any) = x match {
-  case _ : Any => {
+  case _ : Int => {
     println("case Integer")
   }
 }
