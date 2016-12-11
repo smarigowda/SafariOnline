@@ -35,3 +35,16 @@ def doIt2(x: Any) = x match {
 doIt2(9)
 doIt2(9.0)
 doIt2("abc")
+
+// pair or tuple
+def doIt3(a: Int, b: Int) = (a, b) match {
+  case (1, 1) => println("1, 1")
+  case (1, _) => println("1, _")
+  case (_, 2) => println("_, 2")
+  case (_, _) => println("default case")
+}
+
+doIt3(1, 1)
+doIt3(1, 4)
+doIt3(8, 9)
+doIt3(45, 2)
