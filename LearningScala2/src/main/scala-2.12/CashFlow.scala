@@ -1,19 +1,8 @@
 import java.time.LocalDateTime
 
-/**
-  * Created by sma54 on 11/12/2016.
-  */
-case class CashFlow( amount: Double, currency: String, due: LocalDateTime ) {
-
-}
-
-case class Address(city: String, country: String) {
-
-}
-
-case class Person(name: String, age: Int, address: Address) {
-
-}
+case class CashFlow( amount: Double, currency: String, due: LocalDateTime )
+case class Address(city: String, country: String)
+case class Person(name: String, age: Int, address: Address)
 
 
 object CashFlow {
@@ -44,7 +33,5 @@ object CashFlow {
         println(s"$name is older than 30")
       }
     }
-
-
   }
 }
