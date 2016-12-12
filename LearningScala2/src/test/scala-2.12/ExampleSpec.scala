@@ -7,7 +7,7 @@ class ExampleSpec extends FlatSpec with Matchers {
     val stack = new Stack[Int]
     stack.push(1)
     stack.push(2)
-    stack.pop() should be (2)
+    stack.pop() should be (3)
     stack.pop() should be (1)
   }
 
