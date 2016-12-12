@@ -12,3 +12,14 @@ def fact2(n: Int): Int = n match {
 }
 
 fact2(3)
+
+
+
+// tail recursion
+def fact3(n: Int, acc: Int): Int = n match {
+  case 0 => acc
+  case m => fact3(n-1, m * acc)
+
+}
+
+fact3(4, 1)
