@@ -7,3 +7,7 @@ object Test {
   }
 }
 
+val square2 = (n: Int) => Test.square(n)
+
+square2(10)
+
