@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+
 def fact(n: Int): Int = {
   if(n == 0) 1
   else n * fact(n-1)
@@ -17,6 +19,7 @@ fact2(3)
 
 def factorial(n: Int): Int = {
   // tail recursion
+  @tailrec
   def fact(n: Int, acc: Int): Int = n match {
     case 0 => acc
     case m => fact(n-1, m * acc)
@@ -24,4 +27,4 @@ def factorial(n: Int): Int = {
   fact(n, 1)
 }
 
-factorial(4)
+factorial(6)
