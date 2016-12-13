@@ -8,6 +8,8 @@ object Test {
 }
 
 val square2 = (n: Int) => Test.square(n)
-
 square2(10)
+
+val square3 = Test.square _
+square3(10)
 
