@@ -33,3 +33,6 @@ val pf: PartialFunction[Int, String] = {
 
 
 pf(1)
+
+pf.isDefinedAt(10) // false
+pf.isDefinedAt(1) // true
