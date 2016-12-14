@@ -26,3 +26,10 @@ def f(n: Int) = n match {
 f(1) // works
 //f(10) // MatchError
 
+val pf: PartialFunction[Int, String] = {
+  case 1 => "matched 1...."
+  case 2 => "matched 2...."
+}
+
+
+pf(1)
