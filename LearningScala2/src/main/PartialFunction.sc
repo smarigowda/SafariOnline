@@ -66,6 +66,6 @@ val extensions = List(PhoneExt("steve", 100), PhoneExt("robey", 200))
 
 // { case PhoneExt(name, extension) => extension < 200 } // Partial Function
 
-//val pFunc: PartialFunction[PhoneExt, Boolean] =  { case PhoneExt(name, extension) => extension < 200 }
+val pFunc: PartialFunction[PhoneExt, Boolean] =  { case PhoneExt(name, extension) => extension < 200 }
 
-extensions.filter { case PhoneExt(name, extension) => extension < 200 }
+extensions.filter { pFunc }
