@@ -52,3 +52,20 @@ val partial = one orElse two orElse three orElse wildcard
 
 partial(5) // something else
 partial(1) // one
+
+// mystery of case
+// A PartialFunction is a subtype of Function so filter can also take a PartialFunction!
+
+// example:
+
+case class PhoneExt(name: String, ext: Int)
+
+val extensions = List(PhoneExt("steve", 100), PhoneExt("robey", 200))
+
+//
+
+// { case PhoneExt(name, extension) => extension < 200 } // Partial Function
+
+//val pFunc: PartialFunction[PhoneExt, Boolean] =  { case PhoneExt(name, extension) => extension < 200 }
+
+extensions.filter { case PhoneExt(name, extension) => extension < 200 }
