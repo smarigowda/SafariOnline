@@ -36,3 +36,19 @@ pf(1)
 
 pf.isDefinedAt(10) // false
 pf.isDefinedAt(1) // true
+
+
+
+// composing Partial Functions
+
+val one: PartialFunction[Int, String] = { case 1 => "one" }
+val two: PartialFunction[Int, String] = { case 2 => "two" }
+val three: PartialFunction[Int, String] = { case 3 => "three" }
+val wildcard: PartialFunction[Int, String] = { case _ => "something else" }
+
+
+val partial = one orElse two orElse three orElse wildcard
+
+
+partial(5) // something else
+partial(1) // one
