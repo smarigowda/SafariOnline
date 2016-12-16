@@ -26,3 +26,28 @@ System.identityHashCode(List())
 // while which does not terminate
 // type of this expression is Nothing
 //while(true) { println("infinite loop")}
+
+
+// more list operations
+
+// appending to list
+val lst4 = lst :+ 6
+
+// list concatenation
+val lst5 = lst4 ::: lst2
+
+val lst6 = List("Santosh", "Roopa", "Sukruthi")
+
+// List of type Any
+// Heterogeneous collection
+// may be a code smell, use type hint
+val lst7 = lst6 ::: lst5
+
+// new value created, existing is not modified
+val lst8 = lst ::: lst
+
+
+
+
+
+
