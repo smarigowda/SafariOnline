@@ -9,6 +9,4 @@ class Employee extends Worker
 
 val h2 = new Holder(new Employee)
 
-// type invariance not allowed by default, error: does not conform to expected type
-//
 val h3: Holder[Worker] = h2
