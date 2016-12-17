@@ -5,3 +5,7 @@ lst.foldLeft(0)((acc, nxt) => { acc + nxt })
 
 // product
 lst.foldLeft(1)((acc, nxt) => { acc * nxt })
+
+// string concat
+val str = List("ab", "cd", "ef")
+str.foldLeft("")((a,b) => a + b)
