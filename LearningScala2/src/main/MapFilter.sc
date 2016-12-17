@@ -28,3 +28,15 @@ val peopleCaps2 = people.flatMap(p => p.map(name => name.capitalize))
 // we write code once but read lots and lots of time
 val peopleCapsTerse = people.flatMap(_.map(_.capitalize))
 
+
+val lstCities = List("bangalore", "mysore", "mandya", "kodiyala")
+val lstCities2 = List("bangalore", "mysore", 41, "mandya", "kodiyala")
+
+// using lamda
+// can not catch issue with bad data
+lstCities.map(name => name.capitalize)
+
+// using partial functions we can deal issues with bad data
+lstCities2.map({
+  case s: String => s.capitalize
+})
