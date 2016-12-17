@@ -24,4 +24,7 @@ val peopleCaps = people.flatten.map(name => name.capitalize)
 
 val peopleCaps2 = people.flatMap(p => p.map(name => name.capitalize))
 
+// delightfully clever at the expense of less maintainable code
+// we write code once but read lots and lots of time
 val peopleCapsTerse = people.flatMap(_.map(_.capitalize))
+
