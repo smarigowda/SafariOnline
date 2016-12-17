@@ -28,3 +28,16 @@ for(i <- 1 to 5; j <- 6 to 8) {
 }
 
 (1 to 5).foreach(i => (6 to 8).foreach(j => println(i+j)))
+
+
+var prices = List(
+  List(1000, 200, 100),
+  List(700, 1800, 500),
+  List()
+)
+
+for {
+  prlst <- prices
+  p <- prlst
+  if p >= 1000
+} yield p + p * 0.1
