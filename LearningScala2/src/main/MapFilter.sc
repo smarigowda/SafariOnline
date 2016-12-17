@@ -21,3 +21,5 @@ val onlyPeople = people.flatten
 // give up some control on mechanics
 // for the computer to work on your behalf
 val peopleCaps = people.flatten.map(name => name.capitalize)
+
+val peopleCaps2 = people.flatMap(p => p.map(name => name.capitalize))
