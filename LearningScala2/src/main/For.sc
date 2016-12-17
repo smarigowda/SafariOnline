@@ -41,3 +41,6 @@ for {
   p <- prlst
   if p >= 1000
 } yield p + p * 0.1
+
+
+prices.flatMap(lst => lst.filter(price => price >= 1000).map(price => price + 0.1 * price))
