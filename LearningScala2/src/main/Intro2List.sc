@@ -1,5 +1,5 @@
 // constructing a List
-var lst = List(1,2,3,4,5)
+var lst = List(1,2 , 3, 4, 5)
 
 // another way to construct List using conns (concatenation)
 // start with an empty list Nil and add the elements to the front
@@ -45,6 +45,12 @@ val lst7 = lst6 ::: lst5
 
 // new value created, existing is not modified
 val lst8 = lst ::: lst
+
+
+lst // all elements
+lst.head // only first element
+lst.tail // everything except first element
+
 
 
 
