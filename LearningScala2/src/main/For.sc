@@ -21,3 +21,10 @@ for((k,v) <- List("Sky" -> 34, "Vodafone" -> 45); i <- 1 to 4) {
 for((k,v) <- List("Sky" -> 34, "Vodafone" -> 45) if(v > 35); i <- 1 to 4) {
   println(s"key= $k i= $i")
 }
+
+
+for(i <- 1 to 5; j <- 6 to 8) {
+  println(i + j)
+}
+
+(1 to 5).foreach(i => (6 to 8).foreach(j => println(i+j)))
