@@ -13,3 +13,6 @@ str.foldLeft("")((a,b) => a + b)
 
 // starting point not required
 lst.reduce((a,b) => a + b)
+
+// terse
+lst.reduce(_ + _)
