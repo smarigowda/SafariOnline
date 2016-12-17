@@ -63,5 +63,12 @@ matchList(List(1))
 matchList(List("Santosh"))
 
 
+def printList[T](lst: List[T]): Unit = lst match {
+  case Nil => println("Done...")
+  case h :: t => {
+    print(s"$h ")
+    printList(t)
+  }
+}
 
-
+printList(lst)
