@@ -28,3 +28,11 @@ contains(lst, 9)
 
 // false
 contains(lst, 78)
+
+// reverse using foldLeft
+def reverse[T](lst: List[T]): List[T] = {
+  lst.foldLeft(List[T]())((a,b) => b :: a)
+}
+
+reverse(List(1, 2, 3, 4, 5, 6))
+
