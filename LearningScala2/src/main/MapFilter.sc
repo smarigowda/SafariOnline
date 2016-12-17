@@ -39,4 +39,9 @@ lstCities.map(name => name.capitalize)
 // using partial functions we can deal issues with bad data
 lstCities2.map({
   case s: String => s.capitalize
-})
+  case s: Any => { println("unexpected type");  s} })
+
+// using collect we are transforming partial function into an entire function
+// collect ignores cases which do not match expected cases
+// useful when you do not have control on the source of data
+lstCities2.collect({ case s: String => s.capitalize })
