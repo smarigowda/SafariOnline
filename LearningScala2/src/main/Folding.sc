@@ -16,3 +16,15 @@ lst.reduce((a,b) => a + b)
 
 // terse
 lst.reduce(_ + _)
+
+// implementing contains
+// does not terminate early !
+def contains[T](lst: List[T], item: T) = {
+  lst.foldLeft(false)((a,b) => a || b == item)
+}
+
+// true
+contains(lst, 9)
+
+// false
+contains(lst, 78)
