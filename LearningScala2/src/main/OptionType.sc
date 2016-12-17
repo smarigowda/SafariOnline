@@ -24,3 +24,5 @@ val users = List(
 
 // note None disappears
 val cities = users.flatMap(x => x.city)
+
+// None is an empty option/ empty container
