@@ -52,7 +52,15 @@ lst.head // only first element
 lst.tail // everything except first element
 
 
+def matchList[T](lst: List[T]) = lst match {
+  case List() => println("empty list...")
+  case List(_) => println("list with one element...")
+}
 
+val l = List()
+matchList(l)
+matchList(List(1))
+matchList(List("Santosh"))
 
 
 
