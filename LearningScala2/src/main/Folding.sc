@@ -7,5 +7,9 @@ lst.foldLeft(0)((acc, nxt) => { acc + nxt })
 lst.foldLeft(1)((acc, nxt) => { acc * nxt })
 
 // string concat
+// often performance and GC impacts
 val str = List("ab", "cd", "ef")
 str.foldLeft("")((a,b) => a + b)
+
+// starting point not required
+lst.reduce((a,b) => a + b)
