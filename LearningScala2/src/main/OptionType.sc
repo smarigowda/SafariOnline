@@ -15,5 +15,12 @@ user3.city.getOrElse("City is None")
 user1.city.getOrElse("City is None")
 
 
+val users = List(
+  User("Santosh", Some("UK")),
+  User("Jim", None),
+  User("Linganna", Some("India")),
+  User("Tom", None)
+)
 
-
+// note None disappears
+val cities = users.flatMap(x => x.city)
