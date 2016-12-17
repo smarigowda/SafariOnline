@@ -11,3 +11,7 @@ lst.filter(n => n % 2 == 0)
 lst.map(n => n + 2)
 
 lst.map(_ + 2)
+
+
+// get only the people
+val onlyPeople = people.flatten
