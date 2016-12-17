@@ -23,3 +23,5 @@ val onlyPeople = people.flatten
 val peopleCaps = people.flatten.map(name => name.capitalize)
 
 val peopleCaps2 = people.flatMap(p => p.map(name => name.capitalize))
+
+val peopleCapsTerse = people.flatMap(_.map(_.capitalize))
