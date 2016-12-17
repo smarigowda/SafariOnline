@@ -15,3 +15,9 @@ lst.map(_ + 2)
 
 // get only the people
 val onlyPeople = people.flatten
+
+
+// trade off
+// give up some control on mechanics
+// for the computer to work on your behalf
+val peopleCaps = people.flatten.map(name => name.capitalize)
