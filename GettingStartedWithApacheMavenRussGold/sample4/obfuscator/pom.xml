@@ -22,7 +22,8 @@
                 <version>2.6</version>
                 <executions>
                     <execution>
-                        <phase>generate-sources</phase>
+                        <!--<phase>generate-sources</phase>-->
+                        <!--default phase, it binds by default to this phase so its ok to not provide phase -->
                         <goals>
                             <goal>javacc</goal>
                         </goals>
