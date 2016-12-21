@@ -8,6 +8,10 @@
 
     <name>Echo</name>
 
+    <properties>
+        <project.build.sourceEncoding>UTF8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -28,6 +32,11 @@
                 </executions>
                 <configuration>
                     <mainClass>com.packtpub.maven.Greetings</mainClass>
+                    <arguments>
+                        <argument>
+                            ${project.groupId}
+                        </argument>
+                    </arguments>
                 </configuration>
             </plugin>
         </plugins>
