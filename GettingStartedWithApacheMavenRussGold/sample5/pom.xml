@@ -24,7 +24,7 @@
         <profile>
             <id>dump</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <build>
                 <plugins>
@@ -52,6 +52,40 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>echo</id>
+            <activation>
+                <property>
+                    <name>my.arg</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.2.1</version>
+                        <executions>
+                            <execution>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <mainClass>com.packtpub.maven.Greetings</mainClass>
+                            <arguments>
+                                <argument>
+                                    Final name is: ${my.arg}
+                                </argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
 </project>
