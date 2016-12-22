@@ -34,7 +34,7 @@
                     <mainClass>com.packtpub.maven.Greetings</mainClass>
                     <arguments>
                         <argument>
-                            ${project.groupId}
+                            ${my.arg}
                         </argument>
                     </arguments>
                 </configuration>
