@@ -57,6 +57,7 @@
             <activation>
                 <property>
                     <name>my.arg</name>
+                    <value>green</value>
                 </property>
             </activation>
             <build>
