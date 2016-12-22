@@ -24,7 +24,7 @@
         <profile>
             <id>dump</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <build>
                 <plugins>
@@ -57,7 +57,6 @@
             <activation>
                 <property>
                     <name>my.arg</name>
-                    <value>green</value>
                 </property>
             </activation>
             <build>
