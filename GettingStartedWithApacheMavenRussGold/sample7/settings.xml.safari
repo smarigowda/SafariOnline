@@ -1,0 +1,26 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <proxies>
+    <proxy>
+      <active>false</active>
+      <protocol>http</protocol>
+      <host>my-actual-proxy.com</host>
+      <port>80</port>
+      <nonProxyHosts>*local.com</nonProxyHosts>
+    </proxy>
+  </proxies>
+  <profiles>
+    <profile>
+      <id>use-course-staging</id>
+        <repositories>
+          <repository>
+            <id>demo-app</id>
+            <name>Maven Course Demo Repository</name>
+            <url>http://russgold.github.com/russgold/maven-video/demo-repo</url>
+          </repository>
+        </repositories>
+    </profile>
+  </profiles>
+</settings>
