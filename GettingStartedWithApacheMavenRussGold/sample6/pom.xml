@@ -18,7 +18,7 @@
             <artifactId>tools</artifactId>
             <version>1.6</version>
             <scope>system</scope>
-            <systemPath>${java.home}/../Classes/classes.jar</systemPath>
+            <systemPath>${tools-jar}</systemPath>
         </dependency>
     </dependencies>
 
