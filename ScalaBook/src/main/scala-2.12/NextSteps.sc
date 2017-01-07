@@ -13,3 +13,5 @@ val greeting2: Array[String] = new Array[String](3)
 
 // type of greeting and greeting2 is Array[String]
 
+for( i <- 0 to 2 )
+  println(greeting(i))
