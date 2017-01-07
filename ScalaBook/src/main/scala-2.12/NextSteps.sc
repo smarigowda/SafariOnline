@@ -76,3 +76,8 @@ println(list5)
 
 // :: is a method of its right operand
 // If the method name ends in a colon, the method is invoked on the right operand.
+
+val list6 = 1 :: 2 :: 3 :: Nil
+// Nil is shorthand form to create an empty list
+
+
