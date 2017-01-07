@@ -45,3 +45,13 @@ for(i <- 0 to 2) {
 
 // Scala achieves a conceptual simplicity by treating everything,
 // from arrays to expressions, as objects with methods
+
+
+// concise way to create and initialize arrays
+// compiler infers the type of numNames as Array[String]
+val numNames = Array("Zero", "One", "Two")
+
+// What compiler does
+val numNames2 = Array.apply("Zero", "One", "Two")
+// apply method is defined on companion object
+
