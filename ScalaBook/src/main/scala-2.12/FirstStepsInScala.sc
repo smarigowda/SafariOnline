@@ -26,3 +26,10 @@ println()
 
 // super concise syntax for single argument function
 "New World".foreach(println)
+
+// ch is a val
+// a new val is created and initialized to new value for each iteration
+for ( ch <- "Hello" ) {
+  print(ch)
+  print(' ')
+}
