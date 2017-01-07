@@ -96,3 +96,10 @@ println(pair._2)
 val another = ('u', 'r', "the", 1, 4, "me")
 println(another._4)
 
+// immutable Set
+// invokes factory method apply on Set companion object
+var jetSet = Set("Boeing", "Airbus")
+// reassign with new Set
+jetSet += "Lear"
+
+println(jetSet.contains("Lear"))
