@@ -17,3 +17,9 @@ while( i < 5) {
 }
 println()
 
+// type is inferred
+// foreach takes a function (function literal in this case)
+"hello".foreach(ch => println(ch))
+
+// type is explicitly mentioned
+"World".foreach((ch: Char) => println(ch))
