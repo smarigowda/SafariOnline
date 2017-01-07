@@ -84,3 +84,15 @@ val list7 = 1 :: 2 :: 3 :: List()
 
 println(list6)
 println(list7)
+
+// tuples
+// immutable, can contain different types
+
+val pair = (99, "bottles")
+
+println(pair._1)
+println(pair._2)
+
+val another = ('u', 'r', "the", 1, 4, "me")
+println(another._4)
+
