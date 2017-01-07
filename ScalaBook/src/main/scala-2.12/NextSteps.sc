@@ -80,4 +80,7 @@ println(list5)
 val list6 = 1 :: 2 :: 3 :: Nil
 // Nil is shorthand form to create an empty list
 
+val list7 = 1 :: 2 :: 3 :: List()
 
+println(list6)
+println(list7)
