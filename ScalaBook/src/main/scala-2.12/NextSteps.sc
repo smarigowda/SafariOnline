@@ -109,4 +109,7 @@ val movieSet = Set("A", "Shhh..")
 movieSet += "Shrek"
 println(movieSet)
 
+import scala.collection.immutable.HashSet
+val hashset = HashSet("Tomatoes", "Chillies")
+println(hashset + "Corriender")
 
