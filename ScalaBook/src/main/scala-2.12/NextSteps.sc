@@ -113,6 +113,19 @@ import scala.collection.immutable.HashSet
 val hashset = HashSet("Tomatoes", "Chillies")
 println(hashset + "Corriender")
 
+
+// immutable Map
+val romannumbers = Map(
+  1 -> "I",
+  2 -> "II",
+  3 -> "III",
+  4 -> "IV"
+)
+
+println(romannumbers(4))
+
+
+
 import scala.collection.mutable.Map
 
 val treasuremap = Map[Int, String]()
@@ -124,3 +137,4 @@ treasuremap += ((4, "end"))
 
 println(treasuremap(2))
 println(treasuremap(4))
+
