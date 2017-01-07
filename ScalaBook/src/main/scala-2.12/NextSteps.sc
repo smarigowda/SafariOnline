@@ -15,3 +15,9 @@ val greeting2: Array[String] = new Array[String](3)
 
 for( i <- 0 to 2 )
   println(greeting(i))
+
+// greeting(i) gets transformed into greeting.apply(i). 
+// Thus accessing an element of an array in Scala is simply a method call like any other. 
+// This principle is not restricted to arrays: any application of an object to some arguments in parentheses 
+// will be transformed to an apply method call. Of course this will compile only if that type of object actually 
+// defines an apply method. So it's not a special case; it's a general rule
