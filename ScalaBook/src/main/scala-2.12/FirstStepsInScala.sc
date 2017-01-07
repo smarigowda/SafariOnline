@@ -23,3 +23,6 @@ println()
 
 // type is explicitly mentioned
 "World".foreach((ch: Char) => println(ch))
+
+// super concise syntax for single argument function
+"New World".foreach(println)
