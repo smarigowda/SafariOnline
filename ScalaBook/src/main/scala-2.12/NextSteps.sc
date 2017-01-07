@@ -55,3 +55,14 @@ val numNames = Array("Zero", "One", "Two")
 val numNames2 = Array.apply("Zero", "One", "Two")
 // apply method is defined on companion object
 
+// immutable collection, List[Int]
+val list = List(1, 2, 3)
+
+val list1 = List(1, 2, 3)
+val list2 = List(4, 5, 6)
+
+val list3 = list1 ::: list2
+
+println(list1)
+println(list2)
+println(list3)
