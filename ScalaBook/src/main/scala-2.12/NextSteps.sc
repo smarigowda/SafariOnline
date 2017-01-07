@@ -66,3 +66,13 @@ val list3 = list1 ::: list2
 println(list1)
 println(list2)
 println(list3)
+
+
+// :: is cons operator
+val list4 = List(45, 46)
+val list5 = 44 :: list4
+println(list4)
+println(list5)
+
+// :: is a method of its right operand
+// If the method name ends in a colon, the method is invoked on the right operand.
