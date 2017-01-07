@@ -113,3 +113,14 @@ import scala.collection.immutable.HashSet
 val hashset = HashSet("Tomatoes", "Chillies")
 println(hashset + "Corriender")
 
+import scala.collection.mutable.Map
+
+val treasuremap = Map[Int, String]()
+treasuremap += (1 -> "go to island")
+treasuremap += (2 -> "find X on ground")
+treasuremap += (3 -> "Dig")
+// using tuple which is want is returned by -> method on Int
+treasuremap += ((4, "end"))
+
+println(treasuremap(2))
+println(treasuremap(4))
