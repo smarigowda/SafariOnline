@@ -36,6 +36,16 @@ val littlebigger = 3e5f
 val anotherdouble = 3e5
 val yetanother = 3e5D
 
+// Character literals
+// any Unicode character between single quotes
+val a = 'A'
+//val c = '\101'
+val d = '\u0041'
+
+val f = '\u0044'
+
+// escape sequences
+val backslash = '\\'
 
 
 
