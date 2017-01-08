@@ -1,5 +1,12 @@
 class CheckSumAccumulator {
-  var sum = 0
+  private var sum = 0
+  // method parameters are vals
+  def add(b: Byte): Unit = {
+    sum += b
+  }
+  def checkSum(): Int = {
+    return ~(sum & 0xFF) + 1
+  }
 }
 
 val acc = new CheckSumAccumulator
@@ -7,9 +14,9 @@ val csa = new CheckSumAccumulator
 
 // instance variable
 // every instance gets its own set of the variables
-acc.sum = 34
+//acc.sum = 34
 // when you changed one, the other was unaffected.
-println(csa.sum)
+//println(csa.sum)
 
 // Won't compile, because acc is a val
 // acc = new CheckSumAccumulator
@@ -23,3 +30,7 @@ println(csa.sum)
 // The first step is to prevent outsiders from accessing the fields
 // directly by making the fields private
 
+
+acc.add(18)
+println(acc.checkSum())
+println(acc.checkSum)
