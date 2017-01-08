@@ -2,16 +2,15 @@
 class Rational(n: Int, d: Int) {
   require(d != 0)
 
-
-  private val g = gcd(n.abs, d.abs)
-
-  val numer = n / g
-  val denom = d / g
+  private val g = gcd(n.abs, d.abs) // goes into primary constructor
+  val numer = n / g // goes into primary constructor
+  val denom = d / g // goes into primary constructor
 
   def this(n: Int) = {
     this(n, 1)
   }
-  println(s"created $numer / $denom")
+
+  println(s"created $numer / $denom") // goes into primary constructor
 
   override def toString = numer + "/" + denom
 
