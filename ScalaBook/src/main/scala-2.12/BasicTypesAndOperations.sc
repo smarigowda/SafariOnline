@@ -48,6 +48,19 @@ val f = '\u0044'
 val backslash = '\\'
 
 
+// String literals
+val hello = "hello"
+
+//raw Strings, start and end with """
+
+println(
+  """Welcome to Ultamix 3000
+    Type "HELP" for help """)
+
+println("""Welcome to Ultamix 3000
+    |Type "HELP" for help""".stripMargin)
+
+
 
 
 
