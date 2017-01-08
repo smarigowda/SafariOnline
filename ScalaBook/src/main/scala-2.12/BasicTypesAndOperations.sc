@@ -122,5 +122,15 @@ pepper() && salt()
 salt() && pepper()
 
 
+// == has been carefully crafted so that you get just the equality comparison you want in most cases
+
+1 == 2
+1 != 2
+2 == 2
+1 == 1.0
+List(1, 2, 3) == List(1, 2, 3)
+
+("he" + "llo") == "hello"
+
 
 
