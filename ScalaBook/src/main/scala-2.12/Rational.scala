@@ -14,9 +14,11 @@ class Rational(n: Int, d: Int) {
 
   override def toString = numer + "/" + denom
 
-  def add(that: Rational): Rational = {
+  def + (that: Rational): Rational = {
     new Rational(numer * that.denom + that.numer * denom, denom * that.denom )
   }
+
+  def * (that: Rational): Rational = new Rational(numer * that.numer, denom * that.denom)
 
   def lessThan(that: Rational) = {
     this.numer * that.denom < that.numer * this.denom
@@ -41,7 +43,7 @@ object Main extends App {
 
   val onehalf = new Rational(1, 2)
   val oneforth = new Rational(1, 4)
-  println(onehalf add oneforth)
+  println(onehalf + oneforth)
 
   println(oneforth lessThan onehalf)
   println(onehalf.lessThan(oneforth))
@@ -54,6 +56,8 @@ object Main extends App {
   println(new Rational(56))
 
   println(new Rational(66, 42))
+
+  println(onehalf + onehalf * oneforth)
 
 }
 
