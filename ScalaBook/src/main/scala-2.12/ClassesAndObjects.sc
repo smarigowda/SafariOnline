@@ -32,3 +32,9 @@ val csa = new CheckSumAccumulator
 acc.add(18)
 println(acc.checkSum())
 println(acc.checkSum)
+
+//def f(): Unit = "this String gets lost"
+//def g() { "this String gets lost too" }
+def h() = { "this String gets returned!" }
+
+h()
