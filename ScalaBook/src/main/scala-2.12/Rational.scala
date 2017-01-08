@@ -1,19 +1,22 @@
 // n and d are class parameters
 class Rational(n: Int, d: Int) {
   require(d != 0)
-  val numer = n
-  val denom = d
+
+
+  private val g = gcd(n.abs, d.abs)
+
+  val numer = n / g
+  val denom = d / g
 
   def this(n: Int) = {
     this(n, 1)
   }
   println(s"created $numer / $denom")
 
-
-  override def toString = numer +"/"+ denom
+  override def toString = numer + "/" + denom
 
   def add(that: Rational): Rational = {
-    new Rational(n * that.denom + that.numer * d, d * that.denom )
+    new Rational(numer * that.denom + that.numer * denom, denom * that.denom )
   }
 
   def lessThan(that: Rational) = {
@@ -24,6 +27,10 @@ class Rational(n: Int, d: Int) {
 
   def max(that: Rational) = if(this.lessThan(that)) that else this
   def maxV2(that: Rational) = if(lessThan(that)) that else this
+
+  private def gcd(a: Int, b: Int): Int = {
+    if(b == 0) a else gcd(b, a % b)
+  }
 }
 
 object Main extends App {
@@ -46,6 +53,8 @@ object Main extends App {
   println(onehalf.maxV2(oneforth))
 
   println(new Rational(56))
+
+  println(new Rational(66, 42))
 
 }
 
