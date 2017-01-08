@@ -65,16 +65,45 @@ println("""Welcome to Ultamix 3000
 val bool = true
 val fool = false
 
+// Operators
+// operators are actually just a nice syntax for ordinary method calls
+val sum = 1 + 2
+val sumMore = (1).+(2)
 
+val longSum = 1 + 2L
 
+// The + symbol is an operator—an infix operator to be specific
+// You can use any method in operator notation
 
+// For example, class String has a method, indexOf, that takes one Char parameter
 
+val s = "Hello, World!"
+s indexOf 'o'
 
+s indexOf ('o', 5)
+// Scala invokes s.indexOf('o', 5)
 
+// Any method can be an operator
+//In Scala operators are not special language syntax: any method can be an operator.
+// What makes a method an operator is how you use it. When you write "s.indexOf('o')",
+// indexOf is not an operator. But when you write "s indexOf 'o'", indexOf is an operator,
+// because you're using it in operator notation.
 
+val found = true
+// Scala also has two other operator notations: prefix and postfix
+// prefix and postfix operators are unary
+-7
+(7).unary_-
+!found
+~0xFF
 
+//7 toLong
 
+// In Scala, you can leave off empty parentheses on method calls
 
+val s2 = "Hello World"
+s2.toLowerCase
+//s2 toLowerCase // warning
 
 
 
