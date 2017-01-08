@@ -62,6 +62,9 @@ println("""Welcome to Ultamix 3000
 
 
 
+val bool = true
+val fool = false
+
 
 
 
