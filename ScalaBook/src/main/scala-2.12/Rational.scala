@@ -3,7 +3,13 @@ class Rational(n: Int, d: Int) {
   require(d != 0)
   val numer = n
   val denom = d
+
+  def this(n: Int) = {
+    this(n, 1)
+  }
   println(s"created $numer / $denom")
+
+
   override def toString = numer +"/"+ denom
 
   def add(that: Rational): Rational = {
@@ -39,6 +45,7 @@ object Main extends App {
   println(onehalf.max(oneforth))
   println(onehalf.maxV2(oneforth))
 
+  println(new Rational(56))
 
 }
 
