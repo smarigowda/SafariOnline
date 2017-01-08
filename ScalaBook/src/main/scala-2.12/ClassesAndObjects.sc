@@ -1,7 +1,9 @@
 class CheckSumAccumulator {
   private var sum = 0
   // method parameters are vals
-  def add(b: Byte): Unit = sum += b
+  // In this form, the method looks like a procedure,
+  // a method that is executed only for its side effects
+  def add(b: Byte) { sum += b }
   def checkSum() = ~(sum & 0xFF) + 1
 }
 
