@@ -20,6 +20,10 @@ class Rational(n: Int, d: Int) {
 
   def * (that: Rational): Rational = new Rational(numer * that.numer, denom * that.denom)
 
+  def - (that: Rational) = new Rational(numer * that.denom - that.numer * denom, denom * that.denom)
+
+  def / (that: Rational) = new Rational(numer * that.denom, denom * that.numer)
+
   def lessThan(that: Rational) = {
     this.numer * that.denom < that.numer * this.denom
   }
@@ -58,6 +62,11 @@ object Main extends App {
   println(new Rational(66, 42))
 
   println(onehalf + onehalf * oneforth)
+
+  println(onehalf - oneforth)
+  println(onehalf - onehalf)
+
+  println(onehalf / onehalf)
 
 }
 
