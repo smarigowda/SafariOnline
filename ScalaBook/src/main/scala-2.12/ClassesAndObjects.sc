@@ -1,12 +1,8 @@
 class CheckSumAccumulator {
   private var sum = 0
   // method parameters are vals
-  def add(b: Byte): Unit = {
-    sum += b
-  }
-  def checkSum(): Int = {
-    return ~(sum & 0xFF) + 1
-  }
+  def add(b: Byte): Unit = sum += b
+  def checkSum() = ~(sum & 0xFF) + 1
 }
 
 val acc = new CheckSumAccumulator
