@@ -20,6 +20,10 @@ class Rational(n: Int, d: Int) {
 
   def * (that: Rational): Rational = new Rational(numer * that.numer, denom * that.denom)
 
+  def * (i: Int): Rational = {
+    new Rational(numer * i, denom)
+  }
+
   def - (that: Rational) = new Rational(numer * that.denom - that.numer * denom, denom * that.denom)
 
   def / (that: Rational) = new Rational(numer * that.denom, denom * that.numer)
@@ -67,6 +71,9 @@ object Main extends App {
   println(onehalf - onehalf)
 
   println(onehalf / onehalf)
+
+  // mixed arithmetic
+  println(onehalf * 3)
 
 }
 
