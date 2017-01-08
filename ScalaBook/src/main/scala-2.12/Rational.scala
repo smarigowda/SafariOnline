@@ -73,7 +73,22 @@ object Main extends App {
   println(onehalf / onehalf)
 
   // mixed arithmetic
+  // compiler picks the version of an overloaded method that correctly matches the types of the arguments
   println(onehalf * 3)
+
+  // You can create an implicit conversion that automatically converts integers to rational numbers when needed
+  implicit def intToRational(x: Int) = new Rational(x)
+
+  // Note that for an implicit conversion to work, it needs to be in scope.
+  // If you place the implicit method definition inside class Rational,
+  // it won't be in scope in the interpreter. For now, you'll need to define it directly
+  // in the interpreter
+  println(34 * new Rational(1,17))
+
+  // As you can glimpse from this example, implicit conversions are a very powerful technique
+  // for making libraries more flexible and more convenient to use. Because they are so powerful,
+  // they can also be easily misused. You'll find out more on implicit conversions,
+  // including ways to bring them into scope where they are needed
 
 }
 
