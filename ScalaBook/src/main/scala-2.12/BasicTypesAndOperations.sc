@@ -106,5 +106,21 @@ s2.toLowerCase
 //s2 toLowerCase // warning
 
 
+def salt() = {
+  println("salt")
+  false
+}
+
+def pepper() = {
+  println("pepper")
+  true
+}
+
+// all Scala methods have a facility for delaying the evaluation of their arguments,
+// or even declining to evaluate them at all
+pepper() && salt()
+salt() && pepper()
+
+
 
 
