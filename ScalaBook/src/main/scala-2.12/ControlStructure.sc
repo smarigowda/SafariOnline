@@ -52,6 +52,19 @@ def gcdFuncStyle(x: Long, y: Long): Long = {
 
 println(gcdFuncStyle(6, 24))
 
+val files = new java.io.File(".").listFiles
+for(file <- files) { // generator syntax
+  println(file)
+}
+
+// for expression works on any type of collection
+
+// Range, special case
+1 to 4 // immutable Range inclusive
+for(i <- 1 to 4) {
+  println(s"Iteration $i")
+}
+
 
 
 
