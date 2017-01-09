@@ -95,5 +95,21 @@ def grep(pattern: String) = {
 println("----- calling grep ------")
 grep(".*grep.*")
 
+def scalaFiles = {
+  for {
+    file <- files
+  } yield file
+}
+
+for ( f <- scalaFiles ) println(f)
 
 
+
+val linelengths = for {
+  file <- files
+  if file.getName.endsWith(".sc");
+  line <- fileLines(file)
+  if line.trim.matches(".*grep.*")
+} yield line.trim.length
+
+for ( length <- linelengths ) println(length)
