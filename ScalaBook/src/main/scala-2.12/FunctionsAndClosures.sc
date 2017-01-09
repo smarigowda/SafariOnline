@@ -18,3 +18,21 @@ object LongLines {
 
 val fname = "/Users/sma54/SAN/github/SafariOnline/ScalaBook/src/main/scala-2.12/ControlStructure.sc"
 LongLines.processFiles(fname, 40)
+
+// using local function
+// function inside function
+
+def processFile(filename: String, width: Int): Unit = {
+
+  def processLine(filename: String, width: Int, line: String): Unit = {
+    if(line.length > width) {
+      println(filename + ": " + line)
+    }
+  }
+  val source = Source.fromFile(filename)
+  for(line <- source.getLines) {
+    processLine(filename, width, line)
+  }
+}
+
+processFile(fname, 40)
