@@ -33,17 +33,17 @@ println(gcd)
 // while always returns result of type Unit
 // Unit has only one value which is ()
 
-def greet() { println("Hello World") }
+//def greet() { println("Hello World") }
 
-greet() == () // true
+//greet() == () // true
 
 // assign/ reassign to var returns Unit
 
 var x = "Hello"
 
-if ( (x = "New World") == ()) {
-  println("re-assign returns Unit value")
-}
+//if ( (x = "New World") == ()) {
+//  println("re-assign returns Unit value")
+//}
 
 // functional style
 def gcdFuncStyle(x: Long, y: Long): Long = {
@@ -52,7 +52,7 @@ def gcdFuncStyle(x: Long, y: Long): Long = {
 
 println(gcdFuncStyle(6, 24))
 
-val files = new java.io.File(".").listFiles
+val files = new java.io.File("/Users/sma54/SAN/github/SafariOnline/ScalaBook/src/main/scala-2.12").listFiles
 for(file <- files) { // generator syntax
   println(file)
 }
@@ -67,12 +67,39 @@ for(i <- 1 to 4) {
 
 for(i <- 1 until 4) println(i)
 
-for(file <- files if file.getName.endsWith(".dylib"))
+for(file <- files if file.getName.endsWith(".scala"))
   println(file)
 
-for(file <- files if file.isFile; if file.getName.endsWith(".dylib"))
-  println(file)
+def fileLines(file: java.io.File) = {
+//  println("----")
+//  println(file)
+  scala.io.Source.fromFile(file).getLines.toList
+}
 
+for(file <- files if file.isFile; if file.getName.endsWith(".scala")) {
+  println(file)
+}
+
+// nested iteration
+def grep(pattern: String) = {
+  for (
+    file <- files
+    if file.getName.endsWith("e.sc");
+    line <- fileLines(file)
+    if(line.trim.matches(pattern))
+  ) {
+    println("----------")
+//    fileLines(file)
+    println(file)
+    println(line)
+  }
+}
+
+println("----- calling grep ------")
+grep(".*grep.*")
+
+
+// fileLines
 
 
 
