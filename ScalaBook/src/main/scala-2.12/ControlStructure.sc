@@ -45,7 +45,12 @@ if ( (x = "New World") == ()) {
   println("re-assign returns Unit value")
 }
 
+// functional style
+def gcdFuncStyle(x: Long, y: Long): Long = {
+  if(y == 0) x else gcdFuncStyle(y, x % y)
+}
 
+println(gcdFuncStyle(6, 24))
 
 
 
