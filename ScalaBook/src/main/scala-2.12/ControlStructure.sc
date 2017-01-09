@@ -84,24 +84,16 @@ for(file <- files if file.isFile; if file.getName.endsWith(".scala")) {
 def grep(pattern: String) = {
   for (
     file <- files
-    if file.getName.endsWith("e.sc");
+    if file.getName.endsWith("Structure.sc");
     line <- fileLines(file)
     if(line.trim.matches(pattern))
   ) {
-    println("----------")
-//    fileLines(file)
-    println(file)
-    println(line)
+    println(line.trim)
   }
 }
 
 println("----- calling grep ------")
 grep(".*grep.*")
-
-
-// fileLines
-
-
 
 
 
