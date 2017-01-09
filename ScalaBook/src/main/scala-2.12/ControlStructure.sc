@@ -65,8 +65,13 @@ for(i <- 1 to 4) {
   println(s"Iteration $i")
 }
 
+for(i <- 1 until 4) println(i)
 
+for(file <- files if file.getName.endsWith(".dylib"))
+  println(file)
 
+for(file <- files if file.isFile; if file.getName.endsWith(".dylib"))
+  println(file)
 
 
 
