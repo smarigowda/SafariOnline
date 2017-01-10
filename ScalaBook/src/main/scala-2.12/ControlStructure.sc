@@ -104,12 +104,13 @@ def scalaFiles = {
 for ( f <- scalaFiles ) println(f)
 
 
-
+// mid stream assignment
 val linelengths = for {
   file <- files
   if file.getName.endsWith(".sc");
   line <- fileLines(file)
-  if line.trim.matches(".*grep.*")
-} yield line.trim.length
+  trimmed = line.trim
+  if trimmed.matches(".*grep.*")
+} yield trimmed.length
 
 for ( length <- linelengths ) println(length)
