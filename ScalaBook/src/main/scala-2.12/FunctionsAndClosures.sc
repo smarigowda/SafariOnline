@@ -68,6 +68,20 @@ newSum(1,2,3)
 val sum2args = sum(_: Int, 10, _: Int)
 sum2args(10,10)
 
+val sumOneArg = sum(10, 20, _: Int)
+sumOneArg(30)
+
+
+
+var more = 1 // free variable (closure)
+// x is bound variable
+val addMore = (x: Int) => x + more
+
+addMore(20) // 21
+
+more = 20
+addMore(20) // 40
+
 
 
 
