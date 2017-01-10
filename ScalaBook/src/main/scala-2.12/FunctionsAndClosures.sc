@@ -65,7 +65,8 @@ sum(1,2,3)
 val newSum = sum _
 newSum(1,2,3)
 
-
+val sum2args = sum(_: Int, 10, _: Int)
+sum2args(10,10)
 
 
 
