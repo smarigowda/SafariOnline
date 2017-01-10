@@ -49,7 +49,50 @@ val someNumbers = List(1, 2, 3, -5, -9, 8)
 someNumbers.foreach((x: Int) => println(x))
 
 val filteredlist = someNumbers.filter((x: Int) => x > 0)
-
 val filteredlist2 = someNumbers.filter(x => x > 0)
-
 val filteredlist3 = someNumbers.filter(_ > 0)
+
+// partially applied functions
+someNumbers.map(println _)
+
+someNumbers.map(println)
+
+def sum(a: Int, b: Int, c: Int) = a + b + c
+
+sum(1,2,3)
+
+// Partially applied function
+val newSum = sum _
+newSum(1,2,3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
