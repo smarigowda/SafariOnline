@@ -82,9 +82,25 @@ addMore(20) // 21
 more = 20
 addMore(20) // 40
 
+def makeIncreaser(more: Int) = (x: Int) => x + more
 
+val inc1 = makeIncreaser(1)
+val inc9999 = makeIncreaser(9999)
 
+println(inc1(10))
+println(inc9999(10))
 
+// repeated arguments
+// named arguments
+// default arguments
+
+def echo(args: String*) = { // type of arg is Array[String]
+  for(arg <- args) println(arg)
+}
+
+echo()
+echo("Hello")
+echo("Hello", "Scala", "World")
 
 
 
