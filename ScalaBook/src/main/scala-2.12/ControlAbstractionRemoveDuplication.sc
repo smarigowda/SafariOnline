@@ -1,21 +1,21 @@
 object FileMatcher {
   private def filesHere = (new java.io.File("/Users/sma54/SAN/github/SafariOnline/ScalaBook/src/main/scala-2.12")).listFiles
 
-  private def filesMatching(matcher: String => Boolean) = {
-    for(file <- filesHere; if(matcher(file.getName)))
+  private def filesMatching(query: String, matcher: (String, String) => Boolean) = {
+    for(file <- filesHere; if(matcher(file.getName, query)))
       yield file
   }
 
   def filesEnding(query: String) = {
-    filesMatching((filename: String) => { filename.endsWith(query) })
+    filesMatching(query: String, (filename: String, query: String) => { filename.endsWith(query) })
   }
 
   def filesContaining(query: String) = {
-    filesMatching(_.contains(query))
+    filesMatching(query, _.contains(_))
   }
 
   def filesRegex(query: String) = {
-    filesMatching(_.matches(query))
+    filesMatching(query, _.matches(_))
   }
 
 }
