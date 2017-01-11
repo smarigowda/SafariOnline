@@ -15,3 +15,14 @@ def containsNegHOF(nums: List[Int]): Boolean = {
   nums.exists(num => num < 0)
 //  nums.exists(_ < 0)
 }
+
+def containsOdd(nums: List[Int]): Boolean = {
+  var exists = false
+  for(num <- nums)
+    if(num % 2 == 1)
+      exists = true
+  exists
+}
+
+println(containsOdd(List(10, 12, 13)))
+
