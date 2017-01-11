@@ -11,13 +11,11 @@ object FileMatcher {
   }
 
   def filesContaining(query: String) = {
-    for(file <- filesHere; if(file.getName.contains(query)))
-      yield file
+    filesMatching(_.contains(query))
   }
 
   def filesRegex(query: String) = {
-    for(file <- filesHere; if(file.getName.matches(query)))
-      yield file
+    filesMatching(_.matches(query))
   }
 
 }
