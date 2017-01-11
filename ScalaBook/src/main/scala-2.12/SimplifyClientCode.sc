@@ -8,3 +8,10 @@ def containsNegative(nums: List[Int]): Boolean = {
 
 println(containsNegative(List(1, 2, -3, 4, 5, 67)))
 println(containsNegative(List(1, 2, 3, 4, 5, 67)))
+
+// exists function on List abstracts the looping construct
+// reduces clinet code duplication
+def containsNegHOF(nums: List[Int]): Boolean = {
+  nums.exists(num => num < 0)
+//  nums.exists(_ < 0)
+}
