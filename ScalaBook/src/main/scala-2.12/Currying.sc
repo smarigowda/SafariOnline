@@ -11,4 +11,10 @@ def first(x: Int) = (y: Int) => x + y
 val second = first(20)
 second(34)
 
+// using placeholder notation
+val onePlus = curriedSum(1)_
+onePlus(20)
+
+val twoPlus = curriedSum(2)_
+twoPlus(30)
 
