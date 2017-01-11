@@ -26,3 +26,8 @@ def containsOdd(nums: List[Int]): Boolean = {
 
 println(containsOdd(List(10, 12, 13)))
 
+def containsOddHOF(nums: List[Int]): Boolean = {
+  nums.exists(num => num % 2 == 1)
+}
+
+println(containsOddHOF(List(10, 12, 33)))
