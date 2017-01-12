@@ -67,3 +67,35 @@ val file = new File("/Users/sma54/SAN/github/SafariOnline/ScalaBook/src/main/sca
 withPrintWriter2(file) {
   writer => writer.println(new java.util.Date)
 }
+
+// ByName Parameters
+// implement more like if or while
+// no value to pass into the code between the curly braces
+
+var assertionEnabled = true
+
+def myAssert(predicate: () => Boolean) = {
+  if(assertionEnabled && predicate() == false) {
+    throw new AssertionError
+  }
+}
+
+myAssert(() => 5 > 3)
+//myAssert(() => 3 > 5)
+
+
+// using By Name Parameter
+assertionEnabled = true
+def byNameAssert(predicate: => Boolean) = {
+  if (assertionEnabled && predicate == false) {
+    throw new AssertionError
+  }
+}
+
+//byNameAssert(5 > 3)
+byNameAssert(3 > 5)
+
+println("end of worksheet")
+
+
+
