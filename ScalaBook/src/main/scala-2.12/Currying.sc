@@ -93,7 +93,12 @@ def byNameAssert(predicate: => Boolean) = {
 }
 
 //byNameAssert(5 > 3)
+//byNameAssert(3 > 5)
+
+assertionEnabled = false
+// predicate function is not run when assertion is disabled
 byNameAssert(3 > 5)
+
 
 println("end of worksheet")
 
