@@ -48,8 +48,22 @@ withPrintWriter(
   writer => writer.println(new java.util.Date)
 )
 
-// use curly instead of parans
+// use curly instead of parenthesis
 println("Hello, world!")
 // looks like built in control structure
 // only if there is exactly one argument
 println { "Hello, world!" }
+
+def withPrintWriter2(file: File)(op: PrintWriter => Unit) = {
+  val writer = new PrintWriter(file)
+  try {
+    op(writer)
+  } finally {
+    writer.close()
+  }
+}
+
+val file = new File("/Users/sma54/SAN/github/SafariOnline/ScalaBook/src/main/scala-2.12/date2.txt")
+withPrintWriter2(file) {
+  writer => writer.println(new java.util.Date)
+}
