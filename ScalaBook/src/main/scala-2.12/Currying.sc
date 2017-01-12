@@ -98,6 +98,18 @@ def byNameAssert(predicate: => Boolean) = {
 assertionEnabled = false
 // predicate function is not run when assertion is disabled
 byNameAssert(3 > 5)
+byNameAssert(23 / 0 == 0)
+
+assertionEnabled = false
+def boolAssert(predicate: Boolean) = {
+  if(assertionEnabled && predicate == false) {
+    throw new AssertionError
+  }
+}
+
+
+// expression is run even though the assertion is disabled
+boolAssert(23 / 0 == 0)
 
 
 println("end of worksheet")
