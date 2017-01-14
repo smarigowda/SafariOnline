@@ -49,6 +49,12 @@ a.equalsIgnoreCase(b)
 
 // Scala does not have a null keyword
 
+// multi line Strings
+val speech = """Four score and
+               |seven years ago
+               |our fathers""".stripMargin.replaceAll("\n", " ")
 
 
-
+val speech2 = """This is known as a
+          |"multiline" string
+          |or 'heredoc' syntax.""". stripMargin.replaceAll("\n", " ")
