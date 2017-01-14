@@ -58,3 +58,18 @@ val speech = """Four score and
 val speech2 = """This is known as a
           |"multiline" string
           |or 'heredoc' syntax.""". stripMargin.replaceAll("\n", " ")
+
+"hello Scala world".split(" ").foreach(println)
+
+val str6 = "egg, milk, butter, Coco, Puffs"
+str6.split(" ")
+str6.split(' ')
+println(str6.split(",").foreach(println))
+val str7 = str6.split(",").map(_.trim) // Array of String
+str6.split(",").map(_.trim).foreach(println)
+
+str6.split("\\s+").map(_.trim).foreach(println)
+
+
+
+
