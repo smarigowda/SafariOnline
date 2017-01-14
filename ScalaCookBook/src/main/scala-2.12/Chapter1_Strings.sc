@@ -20,3 +20,35 @@ s.getBytes.foreach(println)
 // you treat the output from take as a String
 // capitalize method is in StringOps class
 "Scala".drop(2).take(2).capitalize
+
+// String equality
+val str1 = "Hello"
+val str2 = "Hello"
+val str3 = "H" + "ello"
+str1 == str2
+str1 == str3
+val str4 = null
+// does not throw NullPointerException
+str3 == str4
+str4 == str3
+
+val str5 = "hello"
+str5.toUpperCase == str1.toUpperCase
+
+// calling a method on null throws exception
+//str4.toUpperCase == str3.toUpperCase
+
+val a = "Marisa"
+val b = "marisa"
+a.equalsIgnoreCase(b)
+
+
+// == is defined in AnyRef class
+// == method first checks fo null values, hence you do not
+// have to check for null values when comparing strings
+
+// Scala does not have a null keyword
+
+
+
+
