@@ -67,7 +67,6 @@ str6.split(' ')
 println(str6.split(",").foreach(println))
 val str7 = str6.split(",").map(_.trim) // Array of String
 str6.split(",").map(_.trim).foreach(println)
-
 str6.split("\\s+").map(_.trim).foreach(println)
 
 
